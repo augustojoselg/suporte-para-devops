@@ -1,0 +1,11 @@
+# Exemplo de configuração do backend S3
+# Copie este arquivo para backend.tf e ajuste os valores
+
+terraform {
+  backend "s3" {
+    bucket  = "SEU_BUCKET_S3_AQUI"
+    key     = "aws/terraform.tfstate"
+    region  = "us-east-1"
+    encrypt = true
+  }
+}

@@ -1,0 +1,33 @@
+# Exemplo de configuração das variáveis
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# Região AWS para deploy
+aws_region = "us-east-1"
+
+# Ambiente (dev, staging, prod)
+environment = "prod"
+
+# Tipo de instância EC2
+instance_type = "t3.micro"
+
+# CIDR da VPC
+vpc_cidr = "10.0.0.0/16"
+
+# CIDR da subnet pública
+subnet_cidr = "10.0.1.0/24"
+
+# Nome do projeto
+project_name = "aws-terraform-infra"
+
+# Nome do cliente (substitua pelo nome real)
+client_name = "SEU_CLIENTE_AQUI"
+
+# Nome da aplicação
+app_name = "app-prod"
+
+# Tags padrão
+default_tags = {
+  Environment = "production"
+  Project     = "terraform-aws"
+  ManagedBy   = "Terraform"
+}
