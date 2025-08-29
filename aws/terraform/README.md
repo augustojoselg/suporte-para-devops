@@ -60,7 +60,7 @@ terraform apply
 terraform output ssh_connection
 
 # Ou conectar manualmente
-ssh -i ~/.ssh/aws-mentorias-01.pem ec2-user@<IP_PUBLICO>
+ssh -i ~/.ssh/deployer-key.pem ec2-user@<IP_PUBLICO>
 ```
 
 ## Recursos Criados
@@ -121,7 +121,7 @@ aws s3 ls s3://terraform-state-augustojoselb
 aws iam get-user
 ```
 
-**Resolvido**: Agora com permissões adequadas, o IAM role é criado automaticamente via Terraform.
+**Resolvido**: Com permissões adequadas, o IAM role é criado automaticamente via Terraform.
 
 ## Recursos Adicionais
 

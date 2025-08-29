@@ -5,13 +5,13 @@ resource "tls_private_key" "ssh_key" {
 }
 
 resource "aws_key_pair" "deployer" {
-  key_name   = "aws-mentorias-01"
+  key_name   = "deployer-key"
   public_key = tls_private_key.ssh_key.public_key_openssh
 
   tags = {
-    Name        = "aws-mentorias-01"
+    Name        = "deployer-key"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 

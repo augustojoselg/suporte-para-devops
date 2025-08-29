@@ -20,7 +20,7 @@ chmod +x apply_iam_policy.sh
 
 **O script fará automaticamente:**
 - Criar a política `TerraformMinimalPolicy`
-- Anexar a política ao usuário `terraform-prod`
+- Anexar a política ao usuário `SEU_USUARIO_IAM_AQUI`
 - Verificar se foi aplicada com sucesso
 
 ## Opção 2: Aplicar Manualmente no Console AWS
@@ -41,7 +41,7 @@ chmod +x apply_iam_policy.sh
 
 ### 3. Anexar Política ao Usuário
 - Clique em "Users" no menu lateral
-- Clique no usuário `terraform-prod`
+- Clique no usuário `SEU_USUARIO_IAM_AQUI`
 - Clique na aba "Permissions"
 - Clique em "Add permissions"
 - Escolha "Attach policies directly"
@@ -54,14 +54,14 @@ chmod +x apply_iam_policy.sh
 ### Via AWS CLI
 ```bash
 # Verificar políticas anexadas
-aws iam list-attached-user-policies --user-name terraform-prod
+aws iam list-attached-user-policies --user-name SEU_USUARIO_IAM_AQUI
 
 # Verificar permissões
-aws iam get-user --user-name terraform-prod
+aws iam get-user --user-name SEU_USUARIO_IAM_AQUI
 ```
 
 ### Via Console AWS
-- Vá para IAM > Users > terraform-prod
+- Vá para IAM > Users > SEU_USUARIO_IAM_AQUI
 - Aba "Permissions"
 - Deve mostrar `TerraformMinimalPolicy` anexada
 
@@ -109,10 +109,10 @@ terraform apply
 ### Erro de Permissões
 ```bash
 # Verificar se a política foi aplicada
-aws iam list-attached-user-policies --user-name terraform-prod
+aws iam list-attached-user-policies --user-name SEU_USUARIO_IAM_AQUI
 
 # Verificar se o usuário existe
-aws iam get-user --user-name terraform-prod
+aws iam get-user --user-name SEU_USUARIO_IAM_AQUI
 ```
 
 ### Erro no Script

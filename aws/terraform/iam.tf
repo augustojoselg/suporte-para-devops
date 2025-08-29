@@ -1,4 +1,4 @@
-# IAM Role para EC2 - Agora com permissões adequadas
+# IAM Role para EC2
 resource "aws_iam_role" "ec2_ecr_role" {
   name = "ECR_EC2_APP"
 
@@ -18,7 +18,7 @@ resource "aws_iam_role" "ec2_ecr_role" {
   tags = {
     Name        = "ECR_EC2_APP"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 

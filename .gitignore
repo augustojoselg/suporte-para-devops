@@ -23,6 +23,8 @@ Thumbs.db
 
 # AWS
 .aws/
+aws/terraform/backend.tf
+
 
 # SSH Keys
 *.pem

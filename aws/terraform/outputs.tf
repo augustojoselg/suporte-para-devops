@@ -36,7 +36,7 @@ output "ecr_repository_url" {
 
 output "ssh_connection" {
   description = "Comando para conectar via SSH"
-  value       = "ssh -i ~/.ssh/aws-mentorias-01.pem ec2-user@${aws_instance.srv_app_prod_01.public_ip}"
+  value       = "ssh -i ~/.ssh/deployer-key.pem ec2-user@${aws_instance.srv_app_prod_01.public_ip}"
 }
 
 output "iam_role_used" {

@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
   tags = {
     Name        = "main-vpc"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "public" {
   tags = {
     Name        = "public-subnet"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 
@@ -32,7 +32,7 @@ resource "aws_internet_gateway" "main" {
   tags = {
     Name        = "main-igw"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 
@@ -48,7 +48,7 @@ resource "aws_route_table" "public" {
   tags = {
     Name        = "public-rt"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 

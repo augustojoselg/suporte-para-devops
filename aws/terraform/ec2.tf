@@ -9,7 +9,7 @@ resource "aws_instance" "srv_app_prod_01" {
   tags = {
     Name        = "app-server"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 
@@ -23,7 +23,7 @@ resource "aws_security_group" "app_sg" {
   tags = {
     Name        = "app_sg"
     Provisioned = "Terraform"
-    Cliente     = "Sysmac-NF"
+    Cliente     = "SEU_CLIENTE_AQUI"
   }
 }
 

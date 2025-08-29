@@ -7,7 +7,7 @@ echo "Aplicando política IAM TerraformMinimalPolicy..."
 
 # Nome da política
 POLICY_NAME="TerraformMinimalPolicy"
-USER_NAME="terraform-prod"
+USER_NAME="SEU_USUARIO_IAM_AQUI"
 
 echo "Criando política: $POLICY_NAME"
 
