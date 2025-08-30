@@ -1,0 +1,30 @@
+# Exemplo de configuração das variáveis
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# Região Azure para deploy
+azure_region = "East US"
+
+# Ambiente (dev, staging, prod)
+environment = "prod"
+
+# Tamanho da VM
+vm_size = "Standard_B1s"
+
+# CIDR da VNet
+vnet_cidr = "10.0.0.0/16"
+
+# CIDR da subnet pública
+subnet_cidr = "10.0.1.0/24"
+
+# Nome do cliente (substitua pelo nome real)
+client_name = "SEU_CLIENTE_AQUI"
+
+# Nome do usuário administrador da VM
+admin_username = "azureuser"
+
+# Tags padrão
+default_tags = {
+  Environment = "production"
+  Project     = "terraform-azure"
+  ManagedBy   = "Terraform"
+}

@@ -1,0 +1,42 @@
+# Exemplo de configuração das variáveis
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# OCID do Tenancy OCI
+oci_tenancy_ocid = "SEU_TENANCY_OCID_AQUI"
+
+# OCID do usuário OCI
+oci_user_ocid = "SEU_USER_OCID_AQUI"
+
+# Fingerprint da chave API
+oci_fingerprint = "SEU_FINGERPRINT_AQUI"
+
+# Caminho para a chave privada da API
+oci_private_key_path = "~/.oci/oci_api_key.pem"
+
+# Região OCI para deploy
+oci_region = "us-ashburn-1"
+
+# Availability Domain (geralmente 1, 2 ou 3)
+availability_domain = "1"
+
+# Ambiente (dev, staging, prod)
+environment = "prod"
+
+# Shape da instância (VM.Standard.E2.1.Micro é elegível para Always Free)
+instance_shape = "VM.Standard.E2.1.Micro"
+
+# CIDR da VCN
+vcn_cidr = "10.0.0.0/16"
+
+# CIDR da subnet pública
+subnet_cidr = "10.0.1.0/24"
+
+# Nome do cliente (substitua pelo nome real)
+client_name = "SEU_CLIENTE_AQUI"
+
+# Tags padrão
+default_tags = {
+  Environment = "production"
+  Project     = "terraform-oci"
+  ManagedBy   = "Terraform"
+}

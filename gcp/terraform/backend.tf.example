@@ -1,0 +1,9 @@
+# Exemplo de configuração do backend Google Cloud Storage
+# Copie este arquivo para backend.tf e ajuste os valores
+
+terraform {
+  backend "gcs" {
+    bucket  = "SEU_BUCKET_GCS_AQUI"
+    prefix  = "gcp/terraform.tfstate"
+  }
+}

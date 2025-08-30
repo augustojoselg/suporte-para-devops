@@ -24,7 +24,9 @@ Thumbs.db
 # AWS
 .aws/
 aws/terraform/backend.tf
-
+azure/terraform/backend.tf
+gcp/terraform/backend.tf
+oci/terraform/backend.tf
 
 # SSH Keys
 *.pem

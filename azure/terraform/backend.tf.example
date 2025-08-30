@@ -1,0 +1,11 @@
+# Exemplo de configuração do backend Azure Storage
+# Copie este arquivo para backend.tf e ajuste os valores
+
+terraform {
+  backend "azurerm" {
+    resource_group_name   = "SEU_RG_TERRAFORM_AQUI"
+    storage_account_name  = "SEU_STORAGE_ACCOUNT_AQUI"
+    container_name        = "terraform-state"
+    key                   = "azure/terraform.tfstate"
+  }
+}

@@ -1,0 +1,43 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+
+packages:
+  - docker
+  - git
+  - wget
+  - curl
+
+groups:
+  - docker
+
+users:
+  - name: ${client_name}
+    groups: docker
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+
+runcmd:
+  - systemctl start docker
+  - systemctl enable docker
+  - usermod -aG docker opc
+  - usermod -aG docker ${client_name}
+  
+  # Instalar Docker Compose
+  - curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  - chmod +x /usr/local/bin/docker-compose
+  
+  # Instalar OCI CLI
+  - bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)" -- --accept-all-defaults
+  
+write_files:
+  - path: /etc/docker/daemon.json
+    content: |
+      {
+        "log-driver": "json-file",
+        "log-opts": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      }
+    permissions: '0644'

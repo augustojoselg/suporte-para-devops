@@ -1,0 +1,33 @@
+# Exemplo de configuração das variáveis
+# Copie este arquivo para terraform.tfvars e ajuste os valores
+
+# ID do projeto GCP
+gcp_project_id = "SEU_PROJECT_ID_AQUI"
+
+# Região GCP para deploy
+gcp_region = "us-central1"
+
+# Zona GCP para deploy
+gcp_zone = "us-central1-a"
+
+# Ambiente (dev, staging, prod)
+environment = "prod"
+
+# Tipo de máquina
+machine_type = "e2-micro"
+
+# CIDR da VPC
+vpc_cidr = "10.0.0.0/16"
+
+# CIDR da subnet
+subnet_cidr = "10.0.1.0/24"
+
+# Nome do cliente (use apenas letras minúsculas, números e hífens)
+client_name = "seu-cliente-aqui"
+
+# Tags padrão
+default_tags = {
+  environment = "production"
+  project     = "terraform-gcp"
+  managed_by  = "terraform"
+}
