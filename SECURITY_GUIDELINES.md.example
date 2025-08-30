@@ -2,12 +2,12 @@
 
 ## Dados Sensíveis Identificados
 
-### **🚨 ATENÇÃO: Dados que NÃO devem ser commitados:**
+### **ATENÇÃO: Dados que NÃO devem ser commitados:**
 
-1. **Account ID AWS**: `167290362223`
-2. **Bucket S3**: `terraform-state-augustojoselg`
-3. **Usuário IAM**: `terraform-prod`
-4. **Nome do Cliente**: `Sysmac-NF`
+1. **Account ID AWS**: `SEU_ACCOUNT_ID_AQUI`
+2. **Bucket S3**: `SEU_BUCKET_S3_AQUI`
+3. **Usuário IAM**: `SEU_USUARIO_IAM_AQUI`
+4. **Nome do Cliente**: `SEU_CLIENTE_AQUI`
 5. **Arquivos de Estado**: `terraform.tfstate`
 6. **Configurações Reais**: `terraform.tfvars`
 
@@ -63,11 +63,11 @@ export AWS_DEFAULT_REGION="us-east-1"
 
 ### **Antes de fazer commit:**
 ```bash
-# Verificar se há dados sensíveis
-grep -r "167290362223" .
-grep -r "terraform-state-augustojoselg" .
-grep -r "Sysmac-NF" .
-grep -r "terraform-prod" .
+# Verificar se há dados sensíveis (substitua pelos seus dados reais)
+grep -r "SEU_ACCOUNT_ID_AQUI" .
+grep -r "SEU_BUCKET_S3_AQUI" .
+grep -r "SEU_CLIENTE_AQUI" .
+grep -r "SEU_USUARIO_IAM_AQUI" .
 
 # Verificar se arquivos sensíveis estão no .gitignore
 git status
@@ -79,6 +79,7 @@ git status
 - `.terraform/`
 - `terraform.tfstate`
 - `backend.tf`
+- `SECURITY_GUIDELINES.md`
 
 ## Boas Práticas
 
@@ -89,6 +90,17 @@ git status
 5. **Revisar commits** antes de fazer push
 6. **Usar branches** para desenvolvimento
 7. **Fazer backup** dos arquivos de configuração reais
+
+## Como Usar Este Arquivo
+
+1. **Copie este arquivo** para `SECURITY_GUIDELINES.md`:
+   ```bash
+   cp SECURITY_GUIDELINES.md.example SECURITY_GUIDELINES.md
+   ```
+
+2. **Edite o arquivo copiado** com seus dados reais
+
+3. **Nunca commite** o arquivo `SECURITY_GUIDELINES.md` (já está no .gitignore)
 
 ## Recursos de Segurança
 

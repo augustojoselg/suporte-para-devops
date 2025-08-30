@@ -46,3 +46,6 @@ id_rsa.pub
 # Temporary
 *.tmp
 *.temp
+
+# Security files with sensitive data
+SECURITY_GUIDELINES.md
